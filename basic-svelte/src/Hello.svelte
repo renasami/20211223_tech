@@ -6,6 +6,7 @@
 	let src = "https://grapee.jp/wp-content/uploads/2021/12/s-14094_main.jpg"
 	let alt = "ガッキー"
 	let num = 0 
+	const nums = [1,2,3,4,5,6,7,8,9]
 	$: floor = Math.floor(num)
 	const random = () => {
 		num = Math.random() * 10
@@ -24,4 +25,11 @@
 	{:else}
 		<h1>冬休み短すぎ</h1>
 	{/if}
+	{#each nums as n}
+		{#if n%3 == 0}
+			<h1 style="color:blue">{n}</h1>
+			{:else}
+			<h1>{n}</h1>
+		{/if}
+	{/each}
 </main>
