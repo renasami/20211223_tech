@@ -20,7 +20,7 @@
 	<h1>{num}</h1>
 	<h1>{floor}</h1>
 	<button on:click={random}>random</button>
-	{#if num > 0.5}
+	{#if num > 5}
 		<h1>冬休み嬉しい</h1>
 	{:else}
 		<h1>冬休み短すぎ</h1>
